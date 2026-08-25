@@ -1,22 +1,18 @@
 plugins {
-    kotlin("jvm") version "2.2.21"
+    alias(libs.plugins.kotlin.jvm) apply false
+    alias(libs.plugins.ktor.plugin) apply false
+    alias(libs.plugins.ktlint) apply false
 }
 
-group = "org.example"
-version = "1.0-SNAPSHOT"
-
-repositories {
-    mavenCentral()
+allprojects {
+    repositories {
+        mavenCentral()
+    }
 }
 
-dependencies {
-    testImplementation(kotlin("test"))
-}
+subprojects {
+    group = "com.terabyte.angamessenger"
+    version = "1.0"
 
-kotlin {
-    jvmToolchain(23)
-}
-
-tasks.test {
-    useJUnitPlatform()
+    apply(plugin = "org.jlleitschuh.gradle.ktlint")
 }
