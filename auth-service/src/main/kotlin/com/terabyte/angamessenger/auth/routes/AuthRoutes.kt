@@ -79,7 +79,7 @@ fun Route.authRoutes() {
 
             val jwtService = application.attributes[JwtServiceKey]
             val newAccessToken = jwtService.generateAccessToken(userId)
-            call.respond(HtStatusCode.OK, UserAuthRefreshResponse(newAccessToken))
+            call.respond(HttpStatusCode.OK, UserAuthRefreshResponse(newAccessToken))
         }
     }
 }
