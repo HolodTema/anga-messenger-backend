@@ -20,6 +20,5 @@ fun Application.module() {
     configureSecurity()
     configureStatusPages()
     routing {
-
     }
 }
