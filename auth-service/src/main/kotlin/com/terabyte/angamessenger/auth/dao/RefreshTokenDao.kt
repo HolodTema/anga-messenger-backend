@@ -23,7 +23,7 @@ object RefreshTokenDao {
         }
     }
 
-    fun getRefreshToken(token: String): Long? {
+    fun getUserIdByRefreshToken(token: String): Long? {
         return transaction {
             RefreshTokens.select { RefreshTokens.token eq token }
                 .map { row ->
