@@ -3,6 +3,8 @@ package com.terabyte.angamessenger.chat
 import com.terabyte.angamessenger.chat.plugins.configureDatabase
 import com.terabyte.angamessenger.chat.plugins.configureSecurity
 import com.terabyte.angamessenger.chat.plugins.configureSerialization
+import com.terabyte.angamessenger.chat.plugins.configureStatusPages
+import com.terabyte.angamessenger.chat.plugins.configureWebSockets
 import com.terabyte.angamessenger.chat.routes.chatRoutes
 import com.terabyte.angamessenger.chat.routes.messageRoutes
 import io.ktor.server.application.Application
@@ -19,6 +21,8 @@ fun Application.module() {
     configureDatabase()
     configureSerialization()
     configureSecurity()
+    configureStatusPages()
+    configureWebSockets()
     routing {
         chatRoutes()
         messageRoutes()
