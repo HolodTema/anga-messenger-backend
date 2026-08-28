@@ -15,6 +15,8 @@ data class UserPublic(
 
 data class UserRegisterRequest(
     val nickname: String,
+    val firstName: String,
+    val lastName: String,
     val password: String,
 )
 
