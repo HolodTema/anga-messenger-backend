@@ -4,6 +4,8 @@ import com.terabyte.angamessenger.auth.plugins.configureDatabase
 import com.terabyte.angamessenger.auth.plugins.configureSecurity
 import com.terabyte.angamessenger.auth.plugins.configureSerialization
 import com.terabyte.angamessenger.auth.plugins.configureStatusPages
+import com.terabyte.angamessenger.auth.routes.authRoutes
+import com.terabyte.angamessenger.auth.routes.userRoutes
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty
@@ -20,5 +22,7 @@ fun Application.module() {
     configureSecurity()
     configureStatusPages()
     routing {
+        authRoutes()
+        userRoutes()
     }
 }
