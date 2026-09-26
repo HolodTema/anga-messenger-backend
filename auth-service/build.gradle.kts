@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.terabyte.angamessender.authservice.ApplicationKt")
+    mainClass.set("com.terabyte.angamessenger.auth.ApplicationKt")
 }
 
 dependencies {

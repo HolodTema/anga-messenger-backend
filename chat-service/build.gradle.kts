@@ -4,7 +4,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.terabyte.angamessender.chatservice.ApplicationKt")
+    mainClass.set("com.terabyte.angamessenger.chat.ApplicationKt")
 }
 
 dependencies {

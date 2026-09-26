@@ -8,13 +8,11 @@ import com.terabyte.angamessenger.chat.plugins.configureWebSockets
 import com.terabyte.angamessenger.chat.routes.chatRoutes
 import com.terabyte.angamessenger.chat.routes.messageRoutes
 import io.ktor.server.application.Application
-import io.ktor.server.engine.embeddedServer
-import io.ktor.server.netty.Netty
+import io.ktor.server.netty.EngineMain
 import io.ktor.server.routing.routing
 
-fun main() {
-    embeddedServer(Netty, port = 8081, host = "0.0.0.0", module = Application::module)
-        .start(wait = true)
+fun main(args: Array<String>) {
+    EngineMain.main(args)
 }
 
 fun Application.module() {
